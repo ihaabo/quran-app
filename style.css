@@ -1,35 +1,53 @@
-
 body {
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    text-align: center;
-    padding: 30px;
+  font-family: 'Arial', sans-serif;
+  background: url('https://i.imgur.com/HWDPGd5.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 600px;
-    margin: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
 }
 
-#ayah-container {
-    margin: 30px 0;
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-.buttons button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    background-color: #f39c12;
-    color: white;
-    cursor: pointer;
+select, button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1em;
 }
 
-.buttons button:hover {
-    background-color: #e67e22;
+button {
+  background-color: #f0b90b;
+  color: black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffd700;
+}
+
+#surahDisplay {
+  margin-top: 30px;
+  font-size: 1.4em;
+  line-height: 1.8;
+  direction: rtl;
+}
+
+#translationDisplay {
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1.6;
+  direction: ltr;
 }

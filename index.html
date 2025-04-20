@@ -1,25 +1,27 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qur'an App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Qur'an App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>📖 Qur'an Lezer</h1>
-        <div id="ayah-container">
-            <p id="arabic"></p>
-            <p id="translation"></p>
-        </div>
-        <div class="buttons">
-            <button onclick="prevAyah()">⬅️ Vorige</button>
-            <button onclick="readAyah()">🔊 Voorlezen</button>
-            <button onclick="nextAyah()">Volgende ➡️</button>
-        </div>
+  <div class="container">
+    <h1>📖 Qur'an App</h1>
+
+    <select id="surahSelect">
+      <option value="">Kies een Surah...</option>
+    </select>
+
+    <div class="buttons">
+      <button id="loadBtn">📥 Laad Surah</button>
+      <button id="readBtn">🔊 Lees Voor</button>
     </div>
-    <script src="script.js"></script>
+
+    <div id="surahDisplay" dir="rtl"></div>
+    <div id="translationDisplay" dir="ltr"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

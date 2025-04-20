@@ -1,44 +1,53 @@
-
-const ayat = [
-    {
-        arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-        translation: "In de naam van Allah, de Meest Barmhartige, de Meest Genadevolle"
-    },
-    {
-        arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
-        translation: "Alle lof zij Allah, de Heer van de werelden"
-    },
-    {
-        arabic: "الرَّحْمَٰنِ الرَّحِيمِ",
-        translation: "De Meest Barmhartige, de Meest Genadevolle"
-    }
-];
-
-let index = 0;
-
-function updateAyah() {
-    document.getElementById("arabic").innerText = ayat[index].arabic;
-    document.getElementById("translation").innerText = ayat[index].translation;
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('https://i.imgur.com/HWDPGd5.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-function nextAyah() {
-    if (index < ayat.length - 1) {
-        index++;
-        updateAyah();
-    }
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
 }
 
-function prevAyah() {
-    if (index > 0) {
-        index--;
-        updateAyah();
-    }
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-function readAyah() {
-    const utterance = new SpeechSynthesisUtterance(ayat[index].translation);
-    utterance.lang = "nl-NL";
-    speechSynthesis.speak(utterance);
+select, button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1em;
 }
 
-updateAyah();
+button {
+  background-color: #f0b90b;
+  color: black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffd700;
+}
+
+#surahDisplay {
+  margin-top: 30px;
+  font-size: 1.4em;
+  line-height: 1.8;
+  direction: rtl;
+}
+
+#translationDisplay {
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1.6;
+  direction: ltr;
+}
